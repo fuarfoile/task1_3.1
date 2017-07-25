@@ -15,7 +15,7 @@ public class Main {
         String menuCommand;
         Scanner in = new Scanner(System.in);
 
-        Buyer[] buyers = new Buyer[10];
+        Buyer[] buyers = new Buyer[15];
         for (int i = 0; i < buyers.length; i++) {
             buyers[i] = new Buyer();
         }
