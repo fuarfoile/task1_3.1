@@ -1,14 +1,17 @@
+/*
+ * ConsoleMenu.java 24/07/2017
+ *
+ * Created by Bondarenko Oleh
+ */
+
+
 package com.boast.menu;
 
 import java.util.Arrays;
 import java.util.Scanner;
 import com.boast.buyer.*;
 
-/**
- * Created by Bondarenko Oleh on 24.07.2017.
- */
-
-public class ConsoleMenu implements MenuInterface {
+public class ConsoleMenu {
 
     public ConsoleMenu() {
         help();
@@ -66,13 +69,13 @@ public class ConsoleMenu implements MenuInterface {
         System.out.println("exit");
     }
 
-    public void showAll(Buyer[] buyers) {
+    private void showAll(Buyer[] buyers) {
         for (Buyer buyer : buyers) {
             System.out.println(buyer);
         }
     }
 
-    public void showSurnamesStartFrom(Buyer[] buyers, String start) {
+    private void showSurnamesStartFrom(Buyer[] buyers, String start) {
         boolean nonFlag = true;
         for (Buyer buyer : buyers) {
             if(buyer.getSecondName().startsWith(start)) {
@@ -85,7 +88,7 @@ public class ConsoleMenu implements MenuInterface {
         }
     }
 
-    public void showCardsFromDiapason(Buyer[] buyers, long start, long end) {
+    private void showCardsFromDiapason(Buyer[] buyers, long start, long end) {
         boolean nonFlag = true;
         for (Buyer buyer : buyers) {
             if(buyer.getCreditCardNumber() >= start && buyer.getCreditCardNumber() <= end) {
@@ -98,7 +101,7 @@ public class ConsoleMenu implements MenuInterface {
         }
     }
 
-    public void sortByAddress(Buyer[] buyers){
+    private void sortByAddress(Buyer[] buyers){
         Arrays.sort(buyers, new BuyerAddressComparator());
     }
 }

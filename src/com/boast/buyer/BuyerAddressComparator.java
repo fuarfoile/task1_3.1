@@ -1,3 +1,10 @@
+/*
+ * BuyerAddressComparator.java 24/07/2017
+ *
+ * Created by Bondarenko Oleh
+ */
+
+
 package com.boast.buyer;
 
 import java.util.Comparator;
